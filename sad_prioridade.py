@@ -14,7 +14,7 @@ st.markdown(
 )
 
 # --------------------------
-## 📊 Entrada de Pesos (Importância dos Critérios)
+## Entrada de Pesos 
 # --------------------------
 st.sidebar.header("Defina os Pesos dos Critérios de Avaliação (1-10)")
 
@@ -29,7 +29,7 @@ peso_valor_norm = peso_valor / soma_pesos
 peso_complexidade_norm = peso_complexidade / soma_pesos
 
 # --------------------------
-## 📋 Entrada de Pedidos
+## Entrada de Pedidos
 # --------------------------
 st.header("Insira os Pedidos a Avaliar")
 
@@ -52,17 +52,17 @@ for i in range(num_pedidos):
     })
 
 # --------------------------
-## 📊 Exibição e Ordenação dos Resultados
+## Exibição e Ordenação dos Resultados
 # --------------------------
 df_pedidos = pd.DataFrame(pedidos)
 df_pedidos = df_pedidos.sort_values(by="Prioridade", ascending=False).reset_index(drop=True)
 
-st.header("📊 Prioridade dos Pedidos")
+st.header(" Prioridade dos Pedidos")
 st.dataframe(df_pedidos)
 
 st.markdown("Pedidos classificados do mais prioritário (1º) para o menos prioritário.")
 
 # --------------------------
-## 📢 Observação
+## Observação
 # --------------------------
 st.caption("O cálculo de prioridade utiliza pesos definidos pelo usuário para ponderar urgência, valor e complexidade.")
