@@ -3,7 +3,7 @@ import pandas as pd
 
 # --- Configuração da Página ---
 st.set_page_config(
-    page_title="SAD Prioridade de Pedidos",
+    page_title="SAD Priorização de Pedidos",
     layout="wide"
 )
 
